@@ -8,8 +8,7 @@
   import Tab2 from "$components/Tab2.svelte";
   import Tab3 from "$components/Tab3.svelte";
 
-  let tabs = $params.tabs;
-  let tab = tabs[0];
+  let tab = $params.tabs;
 
   const myTabs = [
     {

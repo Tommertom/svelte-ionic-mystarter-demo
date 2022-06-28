@@ -5,5 +5,5 @@
     console.log("Navigate url", url);
     $goto(url);
   }
-  navigate("/tabs/tab1");
+  navigate("/tabs/tab2");
 </script>

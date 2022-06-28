@@ -3,14 +3,19 @@ import { Camera, CameraResultType, CameraSource, Photo } from '@capacitor/camera
 import { Capacitor } from '@capacitor/core';
 import { Directory, Filesystem } from '@capacitor/filesystem';
 import { Storage } from '@capacitor/storage';
+import { writable } from 'svelte/store';
 
 export let photos: UserPhoto[] = [];
 let PHOTO_STORAGE: string = 'photos';
+
+export const photoStore = writable([]);
 
 export const loadSaved = async () => {
     // Retrieve cached photo array data
     const photoList = await Storage.get({ key: PHOTO_STORAGE });
     photos = JSON.parse(photoList.value) || [];
+
+    console.log('photoList photos', photoList, photos);
 
     // If running on the web...
     if (!is('hybrid')) {
@@ -26,6 +31,8 @@ export const loadSaved = async () => {
             photo.webviewPath = `data:image/jpeg;base64,${readFile.data}`;
         }
     }
+
+    photoStore.set(photos);
 }
 
 /* Use the device camera to take a photo:
@@ -50,11 +57,15 @@ export const addNewToGallery = async () => {
     // Add new photo to Photos array
     photos.unshift(savedImageFile);
 
+    console.log('savedImageFile', savedImageFile);
+
     // Cache all photo data for future retrieval
     Storage.set({
         key: PHOTO_STORAGE,
         value: JSON.stringify(photos),
     });
+
+    photoStore.set(photos);
 }
 
 // Save picture to file on device
@@ -123,6 +134,8 @@ export const deletePicture = async (photo: UserPhoto, position: number) => {
         path: filename,
         directory: Directory.Data,
     });
+
+    photoStore.set(photos);
 }
 
 const convertBlobToBase64 = (blob: Blob) =>

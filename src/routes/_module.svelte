@@ -3,7 +3,7 @@
   import { onMount } from "svelte";
 
   onMount(() => {
-    // defineCustomElements(window);
+    // defineCustomElements(window); // gives error "failed to fetch dynamically imported module"
   });
 </script>
 

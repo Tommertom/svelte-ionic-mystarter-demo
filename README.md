@@ -21,6 +21,8 @@ npm i
 npm run dev
 ```
 
+N.B. not tested in device. PWA elements gives error.
+
 ## All starters
 * Blank demo - https://github.com/Tommertom/svelte-ionic-blank-demo
 * Tabs demo - https://github.com/Tommertom/svelte-ionic-tabs-demo

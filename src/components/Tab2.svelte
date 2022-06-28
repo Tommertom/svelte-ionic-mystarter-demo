@@ -5,9 +5,10 @@
     photos as photosFromService,
     loadSaved,
     deletePicture,
+    photoStore,
     addNewToGallery as addNewToGalleryFromService,
   } from "$services/photo";
-  import { camera } from "ionicons/icons";
+  import { camera, trash, close } from "ionicons/icons";
 
   const photos = photosFromService;
 
@@ -18,14 +19,14 @@
         {
           text: "Delete",
           role: "destructive",
-          icon: "trash",
+          icon: trash,
           handler: () => {
             deletePicture(photo, position);
           },
         },
         {
           text: "Cancel",
-          icon: "close",
+          icon: close,
           role: "cancel",
           handler: () => {
             // Nothing to do, action sheet is automatically closed
@@ -58,7 +59,7 @@
 
   <ion-grid>
     <ion-row>
-      {#each photos as photo, index}
+      {#each $photoStore as photo, index}
         <ion-col size="6">
           <ion-img
             src={photo.webviewPath}
