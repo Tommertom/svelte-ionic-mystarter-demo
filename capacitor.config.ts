@@ -1,10 +1,10 @@
 import { CapacitorConfig } from '@capacitor/cli';
+
 const config: CapacitorConfig = {
-    appId: "io.ionic.demo.pg.cap.ng",
-    appName: "Photo Gallery Cap Ng",
-    bundledWebRuntime: false,
-    npmClient: "npm",
-    webDir: "www",
+  appId: 'photostarter.svelte.ionic.cool',
+  appName: 'photo-starter-ionic-svelte',
+  webDir: 'dist/client',
+  bundledWebRuntime: false
 };
 
 export default config;

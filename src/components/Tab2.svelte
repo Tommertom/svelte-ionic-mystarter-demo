@@ -41,6 +41,22 @@
     addNewToGalleryFromService();
   };
 
+  // some trials and checks in code of pwa-camera elements. But there is too much going on there...
+  const addNewToGallery2 = async () => {
+    const camera = document.createElement("pwa-camera-modal");
+    const stream = await navigator.mediaDevices.getUserMedia({
+      video: true,
+      audio: false,
+      // ...constraints,
+    });
+    //@ts-ignore
+    const imageCapture = new window.ImageCapture(stream.getVideoTracks()[0]);
+    //@ts-ignore
+    console.log("CAMERA", camera, window.ImageCapture, imageCapture);
+    document.body.appendChild(camera);
+    // await camera.componentOnReady();
+  };
+
   loadSaved();
 </script>
 

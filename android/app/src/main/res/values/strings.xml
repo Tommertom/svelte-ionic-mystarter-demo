@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">photo-starter-ionic-svelte</string>
+    <string name="title_activity_main">photo-starter-ionic-svelte</string>
+    <string name="package_name">photostarter.svelte.ionic.cool</string>
+    <string name="custom_url_scheme">photostarter.svelte.ionic.cool</string>
+</resources>
