@@ -21,7 +21,7 @@ npm i
 npm run dev
 ```
 
-N.B. PWA elements gives error. https://github.com/ionic-team/pwa-elements/issues/109
+N.B. PWA elements are loaded via script in HTML. https://github.com/ionic-team/pwa-elements/issues/109
 
 ## All starters
 * Blank demo - https://github.com/Tommertom/svelte-ionic-blank-demo
