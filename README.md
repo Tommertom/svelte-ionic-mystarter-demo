@@ -2,7 +2,7 @@
 <h1 align="center"> Ionic Svelte Demo - MYSTARTER</h1> <br>
 <p align="center">
   <a href="https://ionicsvelte.firebaseapp.com">
-    <img alt="IonicSvelte" title="IonicSvelte" src="https://github.com/Tommertom/svelte-ionic-app/raw/master/src/static/assets/ionicsvelte_logo.png" width="350">
+    <img alt="IonicSvelte" title="IonicSvelte" src="https://github.com/Tommertom/svelte-ionic-app/raw/master/src/static/assets/svelte-ionic-vite.png" width="350">
   </a>
 </p>
 <br>
@@ -21,7 +21,7 @@ npm i
 npm run dev
 ```
 
-N.B. not tested in device. PWA elements gives error.
+N.B. PWA elements gives error. https://github.com/ionic-team/pwa-elements/issues/109
 
 ## All starters
 * Blank demo - https://github.com/Tommertom/svelte-ionic-blank-demo
