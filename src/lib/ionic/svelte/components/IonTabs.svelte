@@ -18,7 +18,6 @@
   let controller;
   const selectTab = async () => {
     if (controller && controller.select) {
-      console.log("Select", selected);
       controller.select(selected).then(async (x) => {
         const y = await controller.getSelected();
       });
