@@ -23,6 +23,27 @@ npm run dev
 
 N.B. PWA elements are loaded via script in HTML. https://github.com/ionic-team/pwa-elements/issues/109
 
+## Screenshots
+
+<table>
+  <tr>
+    <th>Tab 2</th>
+    <th>Taking picture</th>
+        <th>Picture gallery</th>
+    <th>Action sheet</th>
+  </tr>
+  <tr>
+    <td>
+<img alt="IonicSvelte" title="IonicSvelte" src="screenshots/localhost_3000_tabs_tab2(iPhone SE).png" width="65%" ></td>
+    <td><img alt="IonicSvelte" title="IonicSvelte" src="screenshots/localhost_3000_tabs_tab2(iPhone SE) (3).png" width="45%"></td>
+     <td><img alt="IonicSvelte" title="IonicSvelte" src="screenshots/localhost_3000_tabs_tab2(iPhone SE) (1).png" width="45%"></td>
+      <td><img alt="IonicSvelte" title="IonicSvelte" src="screenshots/localhost_3000_tabs_tab2(iPhone SE) (2).png" width="45%"></td>
+  </tr> 
+</table>
+
+
+</table>
+
 ## All starters
 * Blank demo - https://github.com/Tommertom/svelte-ionic-blank-demo
 * Tabs demo - https://github.com/Tommertom/svelte-ionic-tabs-demo
